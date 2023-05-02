@@ -1,3 +1,6 @@
 {
-    "item.secondmod.copper_ingot": "Copper Ingot"
+    "item.secondmod.copper_ingot": "Copper Ingot",
+    "item.secondmod.raw_black_opal": "Raw Black Opal",
+    "item.secondmod.black_opal": "Black Opal",
+    "creativemodetab.flano_tab": "TheFlano's Second Mod"
 }

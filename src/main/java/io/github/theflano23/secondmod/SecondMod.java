@@ -1,6 +1,7 @@
 package io.github.theflano23.secondmod;
 
 import com.mojang.logging.LogUtils;
+import io.github.theflano23.secondmod.item.ModCreativeModeTabs;
 import io.github.theflano23.secondmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -48,9 +49,20 @@ public class SecondMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS) { //adds copper ingot to miscellaneous tab
+       /* if(event.getTab() == CreativeModeTabs.INGREDIENTS) { //adds items to miscellaneous tab
             event.accept(ModItems.COPPER_INGOT);
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+
+
+        } */
+        if (event.getTab() == ModCreativeModeTabs.FLANO_TAB) { //adds items to custom tab
+            event.accept(ModItems.COPPER_INGOT);
+            event.accept(ModItems.BLACK_OPAL);
+            event.accept(ModItems.RAW_BLACK_OPAL);
+
         }
+
     }
 
 
