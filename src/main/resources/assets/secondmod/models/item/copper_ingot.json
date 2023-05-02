@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated", //gives copper ingot the '3d' look when holding it (each pixel of the texture is a 3D cube)
+  "textures": {
+    "layer0": "secondmod:item/copper_ingot"
+  }
+}

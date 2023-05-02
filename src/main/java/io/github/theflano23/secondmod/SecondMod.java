@@ -1,6 +1,9 @@
 package io.github.theflano23.secondmod;
 
 import com.mojang.logging.LogUtils;
+import io.github.theflano23.secondmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -26,6 +29,8 @@ public class SecondMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -43,7 +48,9 @@ public class SecondMod
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) { //adds copper ingot to miscellaneous tab
+            event.accept(ModItems.COPPER_INGOT);
+        }
     }
 
 
