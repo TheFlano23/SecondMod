@@ -7,3 +7,8 @@ This is for me to read later, in terms of an item json file and how it works:
     "layer0": "secondmod:item/copper_ingot"  this tells minecraft that layer0, in this case the default texture, is in secondmod:item (i think the colon indicates that this is being searched for relative to secondmod/models) and from there it looks for an image (any image type will do?) with the same name and accepts it
 
     Apologies for the spiel but I really want some documentation around so I can fully comprehend all of this
+
+
+
+Addendum - blocks
+  "parent": "secondmod:block/black_opal_block" : might be wrong but I believe this tells the game that the item is a block so it is able to read the json file provided in the same line and use the texture/s as well as the parent in said file (cube_all) to generate a 3D block model instead of an item model

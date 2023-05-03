@@ -1,6 +1,7 @@
 package io.github.theflano23.secondmod;
 
 import com.mojang.logging.LogUtils;
+import io.github.theflano23.secondmod.block.ModBlocks;
 import io.github.theflano23.secondmod.item.ModCreativeModeTabs;
 import io.github.theflano23.secondmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -31,6 +32,7 @@ public class SecondMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -47,19 +49,41 @@ public class SecondMod
 
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    private void addCreative(CreativeModeTabEvent.BuildContents event) //add items to creative mode tabs here
     {
-       /* if(event.getTab() == CreativeModeTabs.INGREDIENTS) { //adds items to miscellaneous tab
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) { //adds items to miscellaneous tab
             event.accept(ModItems.COPPER_INGOT);
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
 
 
-        } */
+        }
+
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+        }
+
+        if (event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.END_STONE_BLACK_OPAL_ORE);
+
+
+        }
+
+
+
         if (event.getTab() == ModCreativeModeTabs.FLANO_TAB) { //adds items to custom tab
             event.accept(ModItems.COPPER_INGOT);
             event.accept(ModItems.BLACK_OPAL);
             event.accept(ModItems.RAW_BLACK_OPAL);
+
+            event.accept(ModBlocks.BLACK_OPAL_BLOCK);
+            event.accept(ModBlocks.BLACK_OPAL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.NETHERRACK_BLACK_OPAL_ORE);
+            event.accept(ModBlocks.END_STONE_BLACK_OPAL_ORE);
 
         }
 

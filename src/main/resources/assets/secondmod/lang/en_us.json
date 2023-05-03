@@ -2,5 +2,12 @@
     "item.secondmod.copper_ingot": "Copper Ingot",
     "item.secondmod.raw_black_opal": "Raw Black Opal",
     "item.secondmod.black_opal": "Black Opal",
+
+    "block.secondmod.black_opal_block": "Block of Black Opal",
+	"block.secondmod.black_opal_ore": "Black Opal Ore",
+    "block.secondmod.deepslate_black_opal_ore": "Deepslate Black Opal Ore",
+	"block.secondmod.netherrack_black_opal_ore": "Netherrack Black Opal Ore",
+    "block.secondmod.end_stone_black_opal_ore": "End Stone Black Opal Ore",
+
     "creativemodetab.flano_tab": "TheFlano's Second Mod"
 }

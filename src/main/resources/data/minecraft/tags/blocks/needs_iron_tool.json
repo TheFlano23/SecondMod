@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "secondmod:black_opal_block",
+    "secondmod:black_opal_ore",
+    "secondmod:deepslate_black_opal_ore",
+    "secondmod:netherrack_black_opal_ore",
+    "secondmod:end_stone_black_opal_ore"
+  ]
+}
