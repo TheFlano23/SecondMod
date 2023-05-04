@@ -17,6 +17,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
+    //if you dont want an item to have a loot table (dont drop anything) append .noLootTable() to the supplier
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SecondMod.MOD_ID);
 
@@ -27,7 +29,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLACK_OPAL_ORE = registerBlock("black_opal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE) //sets the walk sounds (walking on metal)
-                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
+                    .strength(5f)
+                    .requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> DEEPSLATE_BLACK_OPAL_ORE = registerBlock("deepslate_black_opal_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE) //sets the walk sounds (walking on metal)
                     .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
